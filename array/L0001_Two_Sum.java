@@ -30,29 +30,4 @@ public class L0001_Two_Sum {
         }
         throw new IllegalArgumentException("No two sum solution");
     }
-
-    public static void main(String[] args) {
-        int[][] nums = { { 2, 7, 11, 15 }, { 3, 2, 4 }, { 3, 3 } };
-        int[] targets = { 9, 6, 6 };
-        int[][] answers = { { 0, 1 }, { 1, 2 }, { 0, 1 } };
-
-        boolean passed = true;
-        for (int i = 0; i < nums.length; i++) {
-            int[] result = twoSumHashMap(nums[i], targets[i]);
-            for (int j = 0; j < result.length; j++) {
-                if (result[j] != answers[i][j]) {
-                    passed = false;
-                    break;
-                }
-            }
-            if (!passed) {
-                System.out.println("Test failed at index: " + i);
-                break;
-            }
-        }
-        if (passed) {
-            System.out.println("All tests passed.");
-        }
-
-    }
 }
